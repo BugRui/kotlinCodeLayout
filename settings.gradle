@@ -1,0 +1,3 @@
+include ':layout'
+include ':app'
+rootProject.name = "kotlinCodeLayout"

@@ -17,7 +17,9 @@ allprojects {
   implementation 'com.github.BugRui:kotlinCodeLayout:1.0.0-alpha'
 ```
 
-因为kotlinCodeLayout内部使用compileOnly依赖appcompat和constraintlayout，需要在你自己的项目里添加以下依赖，否则打包不通过
+因为kotlinCodeLayout只在内部使用compileOnly，并且依赖于AppCompat和ConstraintLayout，所以需要将以下依赖项添加到自己的项目中，否则compileOnly将无法通过打包
+
+Because kotlinCodeLayout USES compileOnly internally and relies on AppCompat and ConstraintLayout, you need to add the following dependencies to your own project, otherwise the compileOnly will not pass
 
 ```
 implementation 'androidx.appcompat:appcompat:1.1.0'

@@ -1,8 +1,7 @@
 # kotlinCodeLayout [![version](https://jitpack.io/v/BugRui/kotlinCodeLayout.svg)](https://jitpack.io/#BugRui/kotlinCodeLayout/1.0.0-alpha)
 
-kotlin dsl 方式编写代码布局，
+kotlin dsl 方式编写代码布局（Kotlin dsl  Write code layout）
 
-### 集成
 #### Step 1. Add the JitPack repository to your build file
 ```
 allprojects {
@@ -28,7 +27,7 @@ compileOptions {
 
 ```
 
-### 使用
+### 使用 （use）
 
 ```
 _ConstraintLayout(context).apply {

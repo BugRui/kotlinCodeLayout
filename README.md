@@ -19,3 +19,17 @@ allprojects {
 ```
 
 ### 使用
+
+```
+_ConstraintLayout(context).apply {
+	TextView(context).apply{
+	   text="text"	
+	}.lparams(width = layoutWrapContent, height = layoutWrapContent) {
+          startToStart = PARENT_ID
+          endToEnd = PARENT_ID
+          topToTop = PARENT_ID
+          bottomToBottom = PARENT_ID
+        }.also { addView(it) }
+}
+
+```

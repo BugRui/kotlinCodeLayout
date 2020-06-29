@@ -18,6 +18,16 @@ allprojects {
   implementation 'com.github.BugRui:kotlinCodeLayout:1.0.0-alpha'
 ```
 
+####  Step 3. Java1.8
+```
+
+compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+```
+
 ### 使用
 
 ```

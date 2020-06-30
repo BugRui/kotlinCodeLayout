@@ -65,7 +65,7 @@ compileOptions {
 
 ```
 
-#### kotlinCodeLayout
+#### kotlinCodeLayout 
 
 ```
 
@@ -82,6 +82,20 @@ _ConstraintLayout(context).apply {
 }
 
 
+```
+对应LayoutParams  Corresponding LayoutParams
+```
+.lparams(width = layoutWrapContent, height = layoutWrapContent) {
+          startToStart = PARENT_ID
+          endToEnd = PARENT_ID
+          topToTop = PARENT_ID
+          bottomToBottom = PARENT_ID
+        }
+```
+
+将创建的view添加进父容器  Add the created View to the parent container
+```
+.also { addView(it) }
 ```
 
 #### 父容器 layout

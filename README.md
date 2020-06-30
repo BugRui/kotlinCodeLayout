@@ -41,9 +41,14 @@ compileOptions {
 
 ```
 _ConstraintLayout(context).apply {
+	//设置_ConstraintLayout宽高填满
+	setParams(width = layoutMatchParent, height = layoutMatchParent)
+	//添加一个TextView
 	TextView(context).apply{
-	   text="text"	
+	   //这里配置自身的属性
+	   text="Hello World!"	
 	}.lparams(width = layoutWrapContent, height = layoutWrapContent) {
+	  //这里配置与父容器相关的属性
           startToStart = PARENT_ID
           endToEnd = PARENT_ID
           topToTop = PARENT_ID
@@ -51,4 +56,33 @@ _ConstraintLayout(context).apply {
         }.also { addView(it) }
 }
 
+
+
+
+
+对应xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 ```
+
+

@@ -39,28 +39,10 @@ compileOptions {
 
 ### 使用 （use）
 
+xml
+
 ```
-_ConstraintLayout(context).apply {
-	//设置_ConstraintLayout宽高填满
-	setParams(width = layoutMatchParent, height = layoutMatchParent)
-	//添加一个TextView
-	TextView(context).apply{
-	   //这里配置自身的属性
-	   text="Hello World!"	
-	}.lparams(width = layoutWrapContent, height = layoutWrapContent) {
-	  //这里配置与父容器相关的属性
-          startToStart = PARENT_ID
-          endToEnd = PARENT_ID
-          topToTop = PARENT_ID
-          bottomToBottom = PARENT_ID
-        }.also { addView(it) }
-}
 
-
-
-
-
-对应xml
 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -81,6 +63,23 @@ _ConstraintLayout(context).apply {
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
+```
+
+kotlinCodeLayout
+
+```
+
+_ConstraintLayout(context).apply {
+	setParams(width = layoutMatchParent, height = layoutMatchParent)
+	TextView(context).apply{
+	   text="Hello World!"	
+	}.lparams(width = layoutWrapContent, height = layoutWrapContent) {
+          startToStart = PARENT_ID
+          endToEnd = PARENT_ID
+          topToTop = PARENT_ID
+          bottomToBottom = PARENT_ID
+        }.also { addView(it) }
+}
 
 
 ```

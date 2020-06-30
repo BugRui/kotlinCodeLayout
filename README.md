@@ -84,4 +84,50 @@ _ConstraintLayout(context).apply {
 
 ```
 
+#### 父容器 layout
+
+```
+
+_ConstraintLayout
+
+_RelativeLayout
+
+_FrameLayout
+
+_GridLayout
+
+_LinearLayout
+
+_ScrollView
+
+_HorizontalScrollView
+
+_Toolbar
+
+_GridView
+
+_RadioGroup
+
+_TableLayout
+
+_TableRow
+
+_ImageSwitcher
+
+_AppWidgetHostView
+
+_ViewAnimator
+
+```
+#### 公共 common
+
+````
+
+val layoutMatchParent: Int = android.view.ViewGroup.LayoutParams.MATCH_PARENT
+
+val layoutWrapContent: Int = android.view.ViewGroup.LayoutParams.WRAP_CONTENT
+
+
+````
+
 
